@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+.hover-link:hover{
+    color: rgb(0, 195, 255) !important;
+    font-weight: bold !important;
+    text-decoration: underline;
+    }
