@@ -1,0 +1,43 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-5 text-center">
+      <img
+        [src]="character.image"
+        class="img-fluid rounded-start w-100 h-100"
+        [alt]="'picture of ' + character.name"
+      />
+    </div>
+    <div class="col-md-7 bg-secondary-subtle">
+      <div class="card-body">
+        <h4>
+          <a
+            [href]="character.url"
+            target="_blank"
+            class="text-decoration-none hover-link text-dark"
+            >{{ character.name }}</a
+          >
+        </h4>
+        <p class="card-text mb-0">
+          <span class="fw-bold">Specie</span>: {{ character.species }}
+        </p>
+        <p class="card-text">
+          <span class="fw-bold">Gender</span>: {{ character.gender }}
+        </p>
+        <div class="d-flex">
+          <div><span class="fw-bold">Status:&nbsp;</span></div>
+          <div
+            [class]="
+              character.status === 'Alive'
+                ? 'card-text text-success'
+                : character.status === 'Dead'
+                ? 'card-text text-danger'
+                : 'card-text'
+            "
+          >
+            {{ character.status }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
