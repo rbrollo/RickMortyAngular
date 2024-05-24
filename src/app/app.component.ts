@@ -1,9 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeroComponent } from './components/hero/hero.component';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
     HttpClientModule,
     HeroComponent,
     CommonModule,
-    HeaderComponent,
+    RouterLink,
+    RouterLinkActive,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
